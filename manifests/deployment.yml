@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rameshkagithalamicroservicedemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rameshkagithalamicroservicedemo
+  template:
+    metadata:
+      labels:
+        app: rameshkagithalamicroservicedemo 
+    spec:
+      containers:
+        - name: rameshkagithalamicroservicedemo 
+          image: newacrdemo.azurecr.io/rameshkagithalamicroservicedemo
+          ports:
+          - containerPort: 80
